@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  upisdkdemo
+
+  Created by Raymond Zhuang on 2021-09-08.
+  
+*/
+"threeds" = "3DS 验证";
+"access_token" = "access token: ";
+"charge_token" = "charge token: ";
+"reference" = "reference ID: ";
+"consumer_id" = "用户编号";
+"new_payment" = "Apply a new payment";

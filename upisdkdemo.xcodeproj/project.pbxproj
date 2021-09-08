@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C081C77126E9047D00748233 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C081C77326E9047D00748233 /* Localizable.strings */; };
+		C081C77626E907E600748233 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081C77526E907E600748233 /* ViewModel.swift */; };
 		C0D178C126E831F500FFA0F8 /* upisdkdemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D178C026E831F500FFA0F8 /* upisdkdemoApp.swift */; };
 		C0D178C326E831F500FFA0F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D178C226E831F500FFA0F8 /* ContentView.swift */; };
 		C0D178C526E831F700FFA0F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0D178C426E831F700FFA0F8 /* Assets.xcassets */; };
@@ -33,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C081C77226E9047D00748233 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C081C77426E9048100748233 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C081C77526E907E600748233 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C0D178BD26E831F500FFA0F8 /* upisdkdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upisdkdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D178C026E831F500FFA0F8 /* upisdkdemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upisdkdemoApp.swift; sourceTree = "<group>"; };
 		C0D178C226E831F500FFA0F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +105,8 @@
 				C0D178C426E831F700FFA0F8 /* Assets.xcassets */,
 				C0D178C926E831F700FFA0F8 /* Info.plist */,
 				C0D178C626E831F700FFA0F8 /* Preview Content */,
+				C081C77326E9047D00748233 /* Localizable.strings */,
+				C081C77526E907E600748233 /* ViewModel.swift */,
 			);
 			path = upisdkdemo;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = C0D178B426E831F500FFA0F8;
 			productRefGroup = C0D178BE26E831F500FFA0F8 /* Products */;
@@ -234,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0D178C826E831F700FFA0F8 /* Preview Assets.xcassets in Resources */,
+				C081C77126E9047D00748233 /* Localizable.strings in Resources */,
 				C0D178C526E831F700FFA0F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0D178C326E831F500FFA0F8 /* ContentView.swift in Sources */,
+				C081C77626E907E600748233 /* ViewModel.swift in Sources */,
 				C0D178C126E831F500FFA0F8 /* upisdkdemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +304,19 @@
 			targetProxy = C0D178DA26E831F700FFA0F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C081C77326E9047D00748233 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C081C77226E9047D00748233 /* zh-Hans */,
+				C081C77426E9048100748233 /* en */,
+			);
+			name = Localizable.strings;
+			path = Assets.xcassets;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C0D178E026E831F700FFA0F8 /* Debug */ = {
