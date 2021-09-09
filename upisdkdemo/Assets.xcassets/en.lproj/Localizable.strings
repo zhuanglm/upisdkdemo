@@ -11,3 +11,4 @@
 "reference" = "reference ID: ";
 "consumer_id" = "Consumer ID";
 "new_payment" = "Apply a new payment";
+"loading" = "loading...";

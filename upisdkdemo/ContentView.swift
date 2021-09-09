@@ -11,6 +11,7 @@ struct ContentView: View {
     @StateObject var mViewModel = ViewModel()
     @State private var mConsumerID = "115646448"
     @State var mIs3DS = false
+    //@State private var mIsShowingAlert = false
     
     var body: some View {
         VStack(alignment: .center) {
@@ -22,8 +23,9 @@ struct ContentView: View {
             }
             
             Button(action: {
+                //mViewModel.mAccessToken = mConsumerID
+                mViewModel.getAccessToken()
                 mViewModel.getReference()
-                mViewModel.mAccessToken = mConsumerID
             }) {
                 Text("new_payment")
                     .font(.body)
@@ -32,8 +34,13 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .background(Color.blue)
                     .cornerRadius(25)
-            }
+            }.alert(isPresented: $mViewModel.mIsPresentAlert, content: {
+                Alert(title: Text(mViewModel.mErrorMsg?.status ?? "loading"), message: Text("\(mViewModel.mErrorMsg?.data.message ?? "") -- \(mViewModel.mErrorMsg?.data.code ?? "")"), dismissButton: .default(Text("OK")))
+            })
             
+            if(mViewModel.mIsLoading) {
+                ProgressView("loading")
+            }
             
             HStack {
                 Text("access_token")
@@ -47,17 +54,6 @@ struct ContentView: View {
                 .multilineTextAlignment(.leading)
             
             HStack {
-                Text("charge_token")
-                    .font(.body)
-                Text(mViewModel.mAccessToken)
-                    .font(.body)
-                    .multilineTextAlignment(.leading)
-                Spacer()
-                
-            }
-            .frame(maxWidth: .infinity)
-            
-            HStack {
                 Text(LocalizedStringKey("reference"))
                     .font(.body)
                 Text(mViewModel.mReference)
@@ -67,6 +63,18 @@ struct ContentView: View {
                 
             }
             .frame(maxWidth: .infinity)
+            
+            HStack {
+                Text("charge_token")
+                    .font(.body)
+                Text(mViewModel.mReference)
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+                
+            }
+            .frame(maxWidth: .infinity)
+            
             
             Spacer()
         }

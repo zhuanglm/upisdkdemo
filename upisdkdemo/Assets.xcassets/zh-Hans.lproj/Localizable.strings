@@ -10,4 +10,5 @@
 "charge_token" = "charge token: ";
 "reference" = "reference ID: ";
 "consumer_id" = "用户编号";
-"new_payment" = "Apply a new payment";
+"new_payment" = "刷新支付请求";
+"loading" = "正在获取...";
