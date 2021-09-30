@@ -12,3 +12,6 @@
 "consumer_id" = "Consumer ID";
 "new_payment" = "Apply a new payment";
 "loading" = "loading...";
+"credit_card" = "Credit Card";
+"paypal" = "PAYPAL";
+"venmo" = "VENMO";

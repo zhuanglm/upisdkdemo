@@ -9,10 +9,8 @@ import Foundation
 import Moya
 
 public enum RequestApi {
-    //  UserApi
-    //case login(loginName: String, password: String)
     case accessToken
-    case chargeToken
+    case chargeToken(String,String)
     
 }
 
@@ -21,8 +19,15 @@ extension RequestApi: TargetType {
         switch self {
         case .accessToken:
             return .requestParameters(parameters: ["token_type": "client"], encoding: JSONEncoding.default)
-        case .chargeToken:
-            return .requestPlain
+        case .chargeToken(_, let reference):
+            //return .requestPlain
+            return .requestParameters(parameters: ["transaction":["reference":reference,
+                                                                  "amount":10,
+                                                                  "currency":"USD",
+                                                                  "country":"US",
+                                                                  "auto_capture":false,
+                                                                  "note":"braintree test"],
+            ], encoding: JSONEncoding.default)
         }
     }
     
@@ -34,7 +39,7 @@ extension RequestApi: TargetType {
         switch self {
         case .accessToken:
             return "access-tokens"
-        case .chargeToken:
+        case .chargeToken(_, _):
             return "charges"
         }
     }
@@ -44,7 +49,13 @@ extension RequestApi: TargetType {
     }
     
     public var headers: [String : String]? {
-        return ["Authorization": "Bearer braintree--", "Content-Type": "application/json"]
+        switch self {
+        case .accessToken:
+            return ["Authorization": "Bearer braintree", "Content-Type": "application/json"]
+        case .chargeToken(let accessToken, _):
+            return ["Authorization": "Bearer \(accessToken)", "Content-Type": "application/json"]
+        }
+        
     }
     
     

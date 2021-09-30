@@ -12,3 +12,6 @@
 "consumer_id" = "用户编号";
 "new_payment" = "刷新支付请求";
 "loading" = "正在获取...";
+"credit_card" = "信用卡";
+"paypal" = "PAYPAL";
+"venmo" = "VENMO";
