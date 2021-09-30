@@ -7,6 +7,8 @@ target 'upisdkdemo' do
 
   # Pods for upisdkdemo
 pod 'Moya'
+pod 'CPaySDK', :path => './CPaySDK'
+pod 'CardinalMobile', :path => './CPaySDK'
 
   target 'upisdkdemoTests' do
     inherit! :search_paths

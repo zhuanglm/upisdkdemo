@@ -53,7 +53,6 @@
 		C081C78E26EBBB5B00748233 /* upisdkdemo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = upisdkdemo; sourceTree = "<group>"; };
 		C081C79226EBBBCF00748233 /* upisdkdemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "upisdkdemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C0A4148D26EC1F63002EE2BB /* Pods_upisdkdemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_upisdkdemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0A4148F26EC2531002EE2BB /* CPaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CPaySDK.framework; path = ../../../../../../../../XcodeProjects/upisdkdemo/upisdkdemo/Frameworks/CPaySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D178BD26E831F500FFA0F8 /* upisdkdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upisdkdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D178C026E831F500FFA0F8 /* upisdkdemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upisdkdemoApp.swift; sourceTree = "<group>"; };
 		C0D178C226E831F500FFA0F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,7 +102,6 @@
 		2853CAD7C7A091AE9331E012 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0A4148F26EC2531002EE2BB /* CPaySDK.framework */,
 				C0A4148D26EC1F63002EE2BB /* Pods_upisdkdemo.framework */,
 				C081C78E26EBBB5B00748233 /* upisdkdemo */,
 				06A5AB784003AFACA9E2C8C0 /* Pods_upisdkdemo.framework */,
@@ -202,6 +200,7 @@
 				C0D178B926E831F500FFA0F8 /* Sources */,
 				C0D178BA26E831F500FFA0F8 /* Frameworks */,
 				C0D178BB26E831F500FFA0F8 /* Resources */,
+				FACD5EF365A335502A896772 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +238,7 @@
 				C0D178D526E831F700FFA0F8 /* Sources */,
 				C0D178D626E831F700FFA0F8 /* Frameworks */,
 				C0D178D726E831F700FFA0F8 /* Resources */,
+				2FF9F57239B1B2A2524219A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,6 +322,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2FF9F57239B1B2A2524219A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-upisdkdemo-upisdkdemoUITests/Pods-upisdkdemo-upisdkdemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-upisdkdemo-upisdkdemoUITests/Pods-upisdkdemo-upisdkdemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-upisdkdemo-upisdkdemoUITests/Pods-upisdkdemo-upisdkdemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		724FCE443B70A3850BEF59AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,6 +403,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FACD5EF365A335502A896772 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-upisdkdemo/Pods-upisdkdemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-upisdkdemo/Pods-upisdkdemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-upisdkdemo/Pods-upisdkdemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -1,11 +1,15 @@
 PODS:
   - Alamofire (5.4.3)
+  - CardinalMobile (0.0.1)
+  - CPaySDK (0.0.1)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
 
 DEPENDENCIES:
+  - CardinalMobile (from `./CPaySDK`)
+  - CPaySDK (from `./CPaySDK`)
   - Moya
 
 SPEC REPOS:
@@ -13,10 +17,18 @@ SPEC REPOS:
     - Alamofire
     - Moya
 
+EXTERNAL SOURCES:
+  CardinalMobile:
+    :path: "./CPaySDK"
+  CPaySDK:
+    :path: "./CPaySDK"
+
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  CardinalMobile: 69e90653cd611205e619d23b008eb834dc80d2a6
+  CPaySDK: 12ccecc8356aa415c4eb79798472b1712c1f659a
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
 
-PODFILE CHECKSUM: f5682defa1bb6ad85eeb5846258f42d7bd1c7902
+PODFILE CHECKSUM: 6671424112e2e2d1f17b45cdcebd9460d8819ab7
 
 COCOAPODS: 1.11.0
