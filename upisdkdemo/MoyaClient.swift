@@ -32,7 +32,7 @@ extension RequestApi: TargetType {
     }
     
     public var baseURL: URL {
-        return URL(string: "https://api.qa01.citconpay.com/v1/")!
+        return URL(string: "https://api.sandbox.citconpay.com/v1/")!
     }
     
     public var path: String {

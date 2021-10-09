@@ -7,6 +7,7 @@
 
 import Foundation
 import Moya
+import SwiftUI
 
 class ViewModel: ObservableObject {
     @Published var mAccessToken: String = ""
@@ -14,9 +15,49 @@ class ViewModel: ObservableObject {
     @Published var mReference: String = ""
     @Published var mIsLoading = false
     @Published var mIsPresentAlert = false
+    @Published var mIsShowingResult = false
+    @Published var mOrderResult: String = ""
+    @Published var mCheckResult: String = ""
     
     var mErrorMsg: CitconApiResponse<ErrorMessage>? = nil
     let mDecoder = JSONDecoder()
+    
+    func launchPayment(type: CPayType, consumerID: String, is3DS: Bool) {
+        let order = CPayOrder()
+        
+        order.reference = mReference
+        order.chargeToken = mChargeToken
+        order.methodType = type
+        order.ipnUrl = "https://www.ipn.com"
+        
+        CPayManager.setupToken(mAccessToken, withCustomerId: consumerID)
+        if(is3DS) {
+            //TODO: set up 3DS
+        }
+        
+        CPayManager.request(order) { result in
+            print("result--> \(result.code) message: \(result.message)")
+            self.mIsShowingResult = true
+            self.mOrderResult = String(format: "result: %@ message: %@ code: %@", result.result , result.message , result.code)
+        }
+        
+    }
+    
+    @objc func onOrderComplete(_ notification: NSNotification) {
+        let result = notification.object as! CPayCheckResult
+        print("TransId: \(result.referenceId)\n Amount: \(result.amount)\n code: \(result.code)\n status: \(result.status)")
+        
+        self.mIsShowingResult = true
+        self.mCheckResult = String(format: "status: %@  message: %@ transaction: %@", result.status, result.message, result.transactionId)
+    }
+    
+    func registerNotification(_ name: String) {
+        NotificationCenter.default.addObserver(self, selector: #selector(onOrderComplete), name: NSNotification.Name(name), object: nil)
+    }
+    
+    func unregisterNotification(_ name: String) {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(name), object: nil)
+    }
     
     func getAccessToken() {
         let loggerConfig = NetworkLoggerPlugin.Configuration(logOptions: .verbose)

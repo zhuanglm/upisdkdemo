@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import "CPayDefines.h"
-@import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *chargeToken;
 @property (nonatomic, copy) NSString *reference;
 @property (nonatomic, copy) NSString *ipnUrl;
-
-@property (nonatomic, strong) UIViewController *controller;
 
 #pragma mark - 3DS
 @property (nonatomic, assign) BOOL threeDSecureVerification;

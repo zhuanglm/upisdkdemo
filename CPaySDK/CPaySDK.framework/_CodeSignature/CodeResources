@@ -14,11 +14,11 @@
 		</data>
 		<key>Headers/CPayManager.h</key>
 		<data>
-		YTNLmpHhqmOBlLbXpbdJKoNNziE=
+		rTWT10/nGdezxUhywH//yVjnOi8=
 		</data>
 		<key>Headers/CPayOrder.h</key>
 		<data>
-		RC1mf1f9R4ydTi5vpEuz49VDyBI=
+		3Y9Yc+HcXiQ3KG8PoXPxoa2qUxo=
 		</data>
 		<key>Headers/CPayOrderResult.h</key>
 		<data>
@@ -658,22 +658,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YTNLmpHhqmOBlLbXpbdJKoNNziE=
+			rTWT10/nGdezxUhywH//yVjnOi8=
 			</data>
 			<key>hash2</key>
 			<data>
-			NKTW4hrXhkFgjMLymMwFaUe7IzSWtMGdDtH+2Oneve4=
+			sMWUlSBmCUPasbqWQrPGvfXwMH1fr5KCMrXVEcN1+Zo=
 			</data>
 		</dict>
 		<key>Headers/CPayOrder.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RC1mf1f9R4ydTi5vpEuz49VDyBI=
+			3Y9Yc+HcXiQ3KG8PoXPxoa2qUxo=
 			</data>
 			<key>hash2</key>
 			<data>
-			Thh7cYa24S/DebtMT9r68sSEyt34Boch6oyqjlX7K7A=
+			JCCRZDe360RR7lHYVy7Ww0r6035p2+YrLvxfmOxha5s=
 			</data>
 		</dict>
 		<key>Headers/CPayOrderResult.h</key>

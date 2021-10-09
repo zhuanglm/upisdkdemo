@@ -14,12 +14,16 @@ struct upisdkdemoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().onOpenURL { url in
+                print("open URL is \(url)")
+                CPayManager.processOpenURL(UIApplication.shared, url: url, options: [:])
+            }
         }.onChange(of: scenePhase) { newScenePhase in
             switch newScenePhase {
             case .active:
                 print("App is active")
-                CPayManager.initSDK()
+//                CPayManager.initSDK()
+//                CPayManager.setupMode(CPAY_MODE_UAT)
             case .inactive:
                 print("App is inactive")
             case .background:

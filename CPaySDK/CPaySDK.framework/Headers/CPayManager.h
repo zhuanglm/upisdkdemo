@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)processOpenURL:(UIApplication *)app url:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options;
 
-+ (void)processOpenURL:(NSSet<UIOpenURLContext *> *)URLContexts;
++ (void)processOpenURL:(NSSet<UIOpenURLContext *> *)URLContexts API_AVAILABLE(ios(13.0));
 
 /**
  * Request an order with the order object

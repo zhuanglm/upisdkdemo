@@ -1,0 +1,35 @@
+{
+  "name": "CPaySDK",
+  "version": "0.0.1",
+  "summary": "A short description of CPay_framework.",
+  "homepage": "https://github.com/citcon/cpay_framework",
+  "license": "MIT",
+  "authors": {
+    "brownfeng": "text@example.com"
+  },
+  "description": "TODO: Add long description of the pod here.",
+  "frameworks": [
+    "UIKit",
+    "AVFoundation",
+    "MobileCoreServices",
+    "CoreVideo",
+    "Accelerate",
+    "Security",
+    "SystemConfiguration",
+    "CoreMedia",
+    "AudioToolbox",
+    "CoreTelephony",
+    "ImageIO",
+    "WebKit"
+  ],
+  "source": {
+    "path": "."
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "ios": {
+    "vendored_frameworks": "CPaySDK.framework",
+    "resources": "AlipaySDK.bundle"
+  }
+}

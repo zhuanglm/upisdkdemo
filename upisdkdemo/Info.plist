@@ -27,7 +27,7 @@
 			<string>com.citcon.upisdkdemo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.citcon.upisdkdemo.paymets</string>
+				<string>com.citcon.upisdkdemo.payments</string>
 			</array>
 		</dict>
 		<dict/>
