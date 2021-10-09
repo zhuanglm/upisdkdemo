@@ -38,7 +38,8 @@ class ViewModel: ObservableObject {
         CPayManager.request(order) { result in
             print("result--> \(result.code) message: \(result.message)")
             self.mIsShowingResult = true
-            self.mOrderResult = String(format: "result: %@ message: %@ code: %@", result.result , result.message , result.code)
+            self.mOrderResult = String(format: "result: %@ message: %@ code: %d", result.result , result.message , result.code)
+            //self.mOrderResult = "return order result"
         }
         
     }
